@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>MyNote</title>
+    <title>MyWorld</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
                     <li> <a href="&">Inne</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right"> <!-- pull-right <-przesuwa w prawo// navbar nie przesuwa w liscie przewijanej - poprawione -->
-                    <li><a href="#">Zaloguj</a></li> <!-- pierwsza pozycja podświetlona-->
+                    <li><a href="#LoginModal" data-toggle="modal">Zaloguj się</a></li> <!-- pierwsza pozycja podświetlona-->
                 </ul>
             </div>
         </div>
@@ -43,14 +43,55 @@
       <div class="jumbotron" id="mainContainer">
       <h1>Follow my way ! </h1>
                
-      <button type="button" class="btn btn-lg btn-primary btn-center moja1" data-target="">        Dołącz do nas !        <br>   </button>
-      </div>
+      <button type="button" class="btn btn-lg btn-primary btn-center moja1" data-target="#RegisterModal" data-toggle="modal">        Dołącz do nas !        <br>   </button>
+      </div>     
       
-      
+      <!-- Login Form -->
+      <form method="post" id="Loginform">
+        
+                <div class="modal" id="LoginModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button class="close" data-dismiss="modal">
+                            &times;
+                          </button>
+                          <h4 id="myModalLabel">
+                            Logowanie do konta 
+                          </h4>
+                      </div>
+                          
+                      <div class="modal-body">
+                          <div id="loginmessage"></div> <!-- Login message for php file*/-->
+                
+                          <div class="form-group">
+                            <label for="loginemail" class="sr-only">Email:</label>
+                            <input class="form-control" type="email" name="loginemail" id="loginemail" placeholder="Email" maxlength="50">
+                          </div>
+                           <div class="form-group">
+                            <label for="password" class="sr-only">Wybierz hasło:</label>
+                            <input class="form-control" type="password" name="loginpassword" id="loginpassword" placeholder="Hasło" maxlength="30">
+                          </div>
+                          
+                          
+                        <!--<label for="inquiry">
+                          Your inquiry:</label><textarea class="form-control" rows="5" id="inquiry"> 
+                        </textarea>--> 
+                      </div>
+                      <div class="modal-footer">
+                        <input class="btn btn-success" name="Login" type="submit" value="Zaloguj się"> 
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                          Anuluj
+                        </button>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </form>-->
       
       <!-- Register Form - modal in Boostramp--> 
-          <form method="post" id="">
-                  
+          <form method="post" id="Registerform">
+        
                 <div class="modal" id="RegisterModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
@@ -59,22 +100,37 @@
                             &times;
                           </button>
                           <h4 id="myModalLabel">
-                            Thank you for contacting us: 
+                            Zarejestruj się za darmo! 
                           </h4>
                       </div>
+                          
                       <div class="modal-body">
-                        <label for="inquiry">
-                          Your inquiry:
-                        </label>
-                        <textarea class="form-control" rows="5" id="inquiry">
-                        </textarea>
+                          <div id="registermessage"></div> <!-- Sign up message for php file*/-->
+                          <div class="form-group">
+                            <label for="username" class="sr-only">Imię:</label>
+                            <input class="form-control" type="text" name="username" id="username" placeholder="Imię" maxlength="30">
+                          </div>
+                          <div class="form-group">
+                            <label for="email" class="sr-only">Email:</label>
+                            <input class="form-control" type="email" name="email" id="email" placeholder="Email" maxlength="50">
+                          </div>
+                           <div class="form-group">
+                            <label for="password" class="sr-only">Wybierz hasło:</label>
+                            <input class="form-control" type="password" name="password" id="password" placeholder="Hasło" maxlength="30">
+                          </div>
+                           <div class="form-group">
+                            <label for="password2" class="sr-only">Powtórz hasło:</label>
+                            <input class="form-control" type="password" name="password2" id="password2" placeholder="Powtórz Hasło " maxlength="30">
+                          </div>
+                          
+                        <!--<label for="inquiry">
+                          Your inquiry:</label><textarea class="form-control" rows="5" id="inquiry"> 
+                        </textarea>-->
                       </div>
                       <div class="modal-footer">
+                        <input class="btn btn-success" name="Register" type="submit" value="Zarejestruj się"> 
                         <button type="button" class="btn btn-default" data-dismiss="modal">
-                          Close
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                          Send
+                          Anuluj
                         </button>
                       </div>
                   </div>
