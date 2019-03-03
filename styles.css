@@ -1,17 +1,18 @@
-html{
+/*html{
     position: relative;
     min-height: :100%;
         
     
-} /* osadzenie footera na stronie 
+}  osadzenie footera na stronie */
 
 body{
-    font-family: Roboto, serif;
+   
     background: url("img/chorw.png") no-repeat center center;
     background-attachment: fixed;
     background-size: cover; 
-  
+     font-family: Roboto, serif; 
 }
+
 /*jumbotoron*/
 .jumbotron{
     margin-top: 330px;

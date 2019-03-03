@@ -39,6 +39,7 @@
             </div>
         </div>
     </nav>
+      
       <!-- Jumbotron z przciskiem Zarejestrowania-->
       <div class="jumbotron" id="mainContainer">
       <h1>Follow my way ! </h1>
@@ -87,7 +88,7 @@
                   </div>
               </div>
               </div>
-          </form>-->
+          </form>
       
       <!-- Register Form - modal in Boostramp--> 
           <form method="post" id="Registerform">
@@ -137,7 +138,7 @@
               </div>
               </div>
           
-          </form>-->
+          </form>
       
       <!-- Footer -->
      <?php 
