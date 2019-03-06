@@ -73,7 +73,11 @@
                             <label for="password" class="sr-only">Wybierz hasło:</label>
                             <input class="form-control" type="password" name="loginpassword" id="loginpassword" placeholder="Hasło" maxlength="30">
                           </div>
-                          
+                                <div class="checkbox">
+                                    <label> <input type="checkbox" name="rememberme" id="rememberme"> Zapamiętaj mnie </label>
+                                    <a class="pull-right" style="cursor: pointer" data-dismiss="modal" data-target="#forgotpasswordModal" data-toggle="modal"> Zapomniałem hasła </a>
+                                </div>
+                                
                           
                         <!--<label for="inquiry">
                           Your inquiry:</label><textarea class="form-control" rows="5" id="inquiry"> 
@@ -83,6 +87,9 @@
                         <input class="btn btn-success" name="Login" type="submit" value="Zaloguj się"> 
                         <button type="button" class="btn btn-default" data-dismiss="modal">
                           Anuluj
+                        </button>
+                          <button type="button" class="btn btn-default pull-left" data-dismiss="modal" data-target="#RegisterModal" data-toggle="modal">
+                          Zarejestruj się
                         </button>
                       </div>
                   </div>
@@ -139,6 +146,49 @@
               </div>
           
           </form>
+      
+      
+      <!-- Forgot password -->
+      
+      <form method="post" id="forgotpasswordform">
+        
+                <div class="modal" id="forgotpasswordModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button class="close" data-dismiss="modal">
+                            &times;
+                          </button>
+                          <h4 id="myModalLabel">
+                            Zapomniałeś hasła? Wprowadź swój adres email
+                          </h4>
+                      </div>
+                          
+                      <div class="modal-body">
+                          <div id="forgotpasswordmessage"></div> <!-- forgot password message for php file*/-->
+                
+                          <div class="form-group">
+                            <label for="loginemail" class="sr-only">Email:</label>
+                            <input class="form-control" type="email" name="forgotemail" id="forgotemail" placeholder="Email" maxlength="50">
+                          </div>
+                          
+                      </div>
+                      <div class="modal-footer">
+                        <input class="btn btn-success" name="Login" type="submit" value="Wyślij"> 
+                        <button type="button" class="btn btn-default" data-dismiss="modal">
+                          Anuluj
+                        </button>
+                          <button type="button" class="btn btn-default pull-left" >
+                          Zarejestruj się
+                        </button>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </form>
+      
+      
+      
       
       <!-- Footer -->
      <?php 
