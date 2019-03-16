@@ -32,6 +32,7 @@
                     <li class="active"><a href="#">Follow ME!</a></li> <!-- pierwsza pozycja podświetlona-->
                     <li><a href="#">Notatki</a></li>
                     <li> <a href="&">Inne</a></li>
+                     
                 </ul>
                 <ul class="nav navbar-nav navbar-right"> <!-- pull-right <-przesuwa w prawo// navbar nie przesuwa w liscie przewijanej - poprawione -->
                     <li><a href="#LoginModal" data-toggle="modal">Zaloguj się</a></li> <!-- pierwsza pozycja podświetlona-->
