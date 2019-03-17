@@ -15,7 +15,28 @@
       <style>
           .container{
               margin-top: 100px;
+             background: url("img/note-297252_1280.png") ;
+               /*no-repeat center center*/
           }
+            #zapiszKarteczke, #wszystkieKarteczki{
+                      display: none;
+                
+                  }
+          .buttons{
+              margin-bottom:50px;
+          }  
+          textarea{
+               
+              width: 100%;
+              max-width: 100%; /* nie pozwoli użytkownikowi edytować pola ( rozszerzać zminiejszać etc. ) */
+              font-size: 20px;
+              line-height: 1.5em;
+              border-top-width:25px;
+              border-color:#FFD42B;
+              color: blue;              
+              
+          }
+          
       </style>
   </head>
   <body>
@@ -51,7 +72,7 @@
       <div class="container">
           <div class="row">
               <div class="col-md-offset-2 col-md-8">
-                  <div>
+                  <div class="buttons">
                       <button class="btn btn-info btn-lg" id="dodajKarteczke" type="button">Dodaj Karteczkę
                       </button>
                       <button class="btn btn-info btn-lg pull-right" id="edytujKarteczke" type="button">Edytuj Karteczkę
@@ -60,8 +81,10 @@
                       </button>
                       <button class="btn btn-info btn-lg" id="wszystkieKarteczki" type="button">Wszystkie
                       </button>
-                      
                   </div>
+                            <div id="karteczki">
+                            <textarea rows="8">
+                              </textarea></div>
               </div>          
           </div>
       </div>
@@ -73,7 +96,7 @@
       <button type="button" class="btn btn-lg btn-primary btn-center moja1" data-target="#RegisterModal" data-toggle="modal">        Dołącz do nas !        <br>   </button>
       </div>     
       
-      <!-- Login Form -->
+      <!-- Login Form-->
       <form method="post" id="Loginform">
         
                 <div class="modal" id="LoginModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -89,7 +112,9 @@
                       </div>
                           
                       <div class="modal-body">
-                          <div id="loginmessage"></div> <!-- Login message for php file*/-->
+                          <div id="loginmessage"></div> 
+
+                    <!-- Login message for php file*/-->
                 
                           <div class="form-group">
                             <label for="loginemail" class="sr-only">Email:</label>
