@@ -12,13 +12,13 @@
      <link href="styles.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
       
-      <style>
-          .container{
+      <style> 
+          #container{   
               margin-top: 100px;
-             background: url("img/note-297252_1280.png") ;
-               /*no-repeat center center*/
+            /* background: url("img/note-297252_1280.png") no-repeat center center;
+              background-size: 50%;*/
           }
-            #zapiszKarteczke, #wszystkieKarteczki{
+           #karteczka, #zapiszKarteczke, #wszystkieKarteczki{
                       display: none;
                 
                   }
@@ -28,11 +28,11 @@
           textarea{
                
               width: 100%;
-              max-width: 100%; /* nie pozwoli użytkownikowi edytować pola ( rozszerzać zminiejszać etc. ) */
-              font-size: 20px;
+              max-width: 100%; /* nie pozwoli użytkownikowi rozszerzyc pozazakres*/
               line-height: 1.5em;
               border-top-width:25px;
               border-color:#FFD42B;
+              background: #F5DE7F;
               color: blue;              
               
           }
@@ -69,7 +69,7 @@
         </div>
     </nav>
       <!-- My MAin Container -->
-      <div class="container">
+      <div class="container" id="container">
           <div class="row">
               <div class="col-md-offset-2 col-md-8">
                   <div class="buttons">
@@ -82,20 +82,23 @@
                       <button class="btn btn-info btn-lg" id="wszystkieKarteczki" type="button">Wszystkie
                       </button>
                   </div>
-                            <div id="karteczki">
+                            <div id="karteczka">
                             <textarea rows="8">
                               </textarea></div>
+                  <div id="karteczki" class="karteczki">
+        <!--         Ajax call to php file -->
+                  </div>
               </div>          
           </div>
       </div>
       
-      <!-- Jumbotron z przciskiem Zarejestrowania-->
+      <!-- Jumbotron z przciskiem Zarejestrowania
       <div class="jumbotron" id="mainContainer">
       <h1>Follow my way ! </h1>
                
       <button type="button" class="btn btn-lg btn-primary btn-center moja1" data-target="#RegisterModal" data-toggle="modal">        Dołącz do nas !        <br>   </button>
       </div>     
-      
+      -->
       <!-- Login Form-->
       <form method="post" id="Loginform">
         
